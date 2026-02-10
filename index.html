@@ -7,12 +7,12 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 80px;
             background: #ffe6eb;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: #d6336c;
         }
 
@@ -21,7 +21,7 @@
             padding: 15px 30px;
             margin: 20px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
         }
 
@@ -34,6 +34,15 @@
             background-color: #adb5bd;
             color: black;
         }
+
+        .couple-photo {
+            width: 280px;
+            max-width: 90%;
+            border-radius: 20px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -43,7 +52,13 @@
     <button id="yesBtn" onclick="yesClick()">Yes ❤️</button>
     <button id="noBtn" onclick="noClick()">No 😒</button>
 
-    <div id="loveMessage" style="display:none; margin-top:40px;">
+    <!-- Photo (hidden initially) -->
+    <div id="photoSection" style="display:none;">
+        <img src="Us.jpeg" alt="Us ❤️" class="couple-photo">
+    </div>
+
+    <!-- Final Message -->
+    <div id="loveMessage" style="display:none; margin-top:30px;">
         <h1>
             Yayyy!! 💕🥰<br><br>
             Smile to kardooo 😊☺️<br><br>
@@ -65,6 +80,7 @@
         }
 
         function yesClick() {
+            document.getElementById("photoSection").style.display = "block";
             document.getElementById("loveMessage").style.display = "block";
             document.getElementById("noBtn").style.display = "none";
         }
