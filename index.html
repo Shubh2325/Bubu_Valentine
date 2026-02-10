@@ -43,28 +43,32 @@
     <button id="yesBtn" onclick="yesClick()">Yes ❤️</button>
     <button id="noBtn" onclick="noClick()">No 😒</button>
 
+    <div id="loveMessage" style="display:none; margin-top:40px;">
+        <h1>
+            Yayyy!! 💕🥰<br><br>
+            Smile to kardooo 😊☺️<br><br>
+            Baat kare? 💬💖<br><br>
+            See you on Valentine’s Day ❤️
+        </h1>
+    </div>
+
     <script>
-    let yesSize = 20;
+        let yesSize = 20;
 
-    function noClick() {
-        yesSize += 15;
-        document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+        function noClick() {
+            yesSize += 15;
+            document.getElementById("yesBtn").style.fontSize = yesSize + "px";
 
-        if (yesSize > 80) {
+            if (yesSize > 80) {
+                document.getElementById("noBtn").style.display = "none";
+            }
+        }
+
+        function yesClick() {
+            document.getElementById("loveMessage").style.display = "block";
             document.getElementById("noBtn").style.display = "none";
         }
-    }
-
-    function yesClick() {
-        document.body.innerHTML = `
-            <h1>
-                Yayyy!! 💕🥰<br><br>
-                Smile to kardooo 😊☺️<br><br>
-                Baat kare? 💬💖
-            </h1>
-        `;
-    }
-</script>
+    </script>
 
 </body>
 </html>
