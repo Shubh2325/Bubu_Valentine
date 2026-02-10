@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Will You Be My Valentine?</title>
+    <title>Bubu, Will You Be My Valentine?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,27 +38,33 @@
 </head>
 <body>
 
-    <h1>Will you be my Valentine? 💖</h1>
+    <h1>Bubu, Will you be my Valentine? 💖</h1>
 
     <button id="yesBtn" onclick="yesClick()">Yes ❤️</button>
     <button id="noBtn" onclick="noClick()">No 😒</button>
 
     <script>
-        let yesSize = 20;
+    let yesSize = 20;
 
-        function noClick() {
-            yesSize += 15;
-            document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+    function noClick() {
+        yesSize += 15;
+        document.getElementById("yesBtn").style.fontSize = yesSize + "px";
 
-            if (yesSize > 80) {
-                document.getElementById("noBtn").style.display = "none";
-            }
+        if (yesSize > 80) {
+            document.getElementById("noBtn").style.display = "none";
         }
+    }
 
-        function yesClick() {
-            document.body.innerHTML = "<h1>Yayyy!! 💕🥰<br>See you on Valentine’s Day ❤️</h1>";
-        }
-    </script>
+    function yesClick() {
+        document.body.innerHTML = `
+            <h1>
+                Yayyy!! 💕🥰<br><br>
+                Smile to kardooo 😊☺️<br><br>
+                Baat kare? 💬💖
+            </h1>
+        `;
+    }
+</script>
 
 </body>
 </html>
