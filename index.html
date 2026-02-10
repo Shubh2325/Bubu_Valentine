@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #ffe6eb;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d6336c;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #adb5bd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <button id="yesBtn" onclick="yesClick()">Yes ❤️</button>
+    <button id="noBtn" onclick="noClick()">No 😒</button>
+
+    <script>
+        let yesSize = 20;
+
+        function noClick() {
+            yesSize += 15;
+            document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+
+            if (yesSize > 80) {
+                document.getElementById("noBtn").style.display = "none";
+            }
+        }
+
+        function yesClick() {
+            document.body.innerHTML = "<h1>Yayyy!! 💕🥰<br>See you on Valentine’s Day ❤️</h1>";
+        }
+    </script>
+
+</body>
+</html>
